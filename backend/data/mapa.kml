@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Simulacion.kml</name>
+	<Style id="inline">
+		<LineStyle>
+			<color>ffff5500</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="inline0">
+		<LineStyle>
+			<color>ffffaaaa</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="inline1">
+		<LineStyle>
+			<color>ffff5500</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="inline2">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<StyleMap id="inline3">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#inline0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#inline5</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="inline4">
+		<LineStyle>
+			<color>ff0000ff</color>
+			<width>2</width>
+		</LineStyle>
+	</Style>
+	<Style id="inline5">
+		<LineStyle>
+			<color>ffffaaaa</color>
+			<width>3</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="inline6">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#inline1</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#inline</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="inline7">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#inline4</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#inline2</styleUrl>
+		</Pair>
+	</StyleMap>
+	<StyleMap id="msn_rainy">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_rainy</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_rainy</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_rainy">
+		<IconStyle>
+			<scale>1.4</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rainy.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Style id="sn_rainy">
+		<IconStyle>
+			<scale>1.2</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/shapes/rainy.png</href>
+			</Icon>
+			<hotSpot x="0.5" y="0" xunits="fraction" yunits="fraction"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<ListStyle>
+		</ListStyle>
+	</Style>
+	<Folder>
+		<name>Simulacion</name>
+		<Placemark>
+			<name>Lado Izquierdo</name>
+			<styleUrl>#inline6</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-64.84282430567789,-21.54643726154469,0 -64.83555493003095,-21.5399852938255,0 -64.82614954302143,-21.53967657397468,0 -64.82077357534448,-21.53469082518602,0 -64.81798124780251,-21.52986156211087,0 -64.80841953038457,-21.52128809163889,0 -64.81028742680074,-21.51410271611554,0 -64.82908373263629,-21.5182180617134,0 -64.84633594759285,-21.52920015372535,0 -64.85026665668116,-21.53467786777171,0 -64.8542745221488,-21.54116262781323,0 -64.85210329884434,-21.54860605124458,0 -64.84282430567789,-21.54643726154469,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>Pendiente</name>
+			<styleUrl>#inline7</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					-64.84904797313654,-21.53360237698816,2807.990738691085 -64.80883460298723,-21.5210602869376,2128.335744848823 
+				</coordinates>
+			</LineString>
+		</Placemark>
+		<Placemark>
+			<name>Toma de Agua de Cosaalt</name>
+			<LookAt>
+				<longitude>-64.83126439995827</longitude>
+				<latitude>-21.5422248429178</latitude>
+				<altitude>0</altitude>
+				<heading>-4.154265882117284</heading>
+				<tilt>32.61162556205215</tilt>
+				<range>3582.891718305686</range>
+				<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+			</LookAt>
+			<styleUrl>#msn_rainy</styleUrl>
+			<Point>
+				<gx:drawOrder>1</gx:drawOrder>
+				<coordinates>-64.83526725856082,-21.54198952400609,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Lado Derecho</name>
+			<styleUrl>#inline3</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-64.84561029215071,-21.55104547500311,0 -64.83708628308413,-21.55684437774383,0 -64.83243842637343,-21.55692516953432,0 -64.82820866030458,-21.55463337227206,0 -64.82226021175975,-21.55054970514837,0 -64.81885350355836,-21.54692469609962,0 -64.81346408765096,-21.54196281031718,0 -64.80270304713655,-21.53475027186003,0 -64.80127793802184,-21.53117736687491,0 -64.8043279770945,-21.52759968155431,0 -64.80626362972856,-21.5246671533768,0 -64.80734606474157,-21.52331002228983,0 -64.80904709687017,-21.52501939556001,0 -64.81073630870485,-21.52667104899216,0 -64.81193189713035,-21.52831148470188,0 -64.81235208493398,-21.52976813815744,0 -64.81410845620951,-21.53139642184022,0 -64.81509408499227,-21.53287018892761,0 -64.81698804133414,-21.5342698093819,0 -64.81893083730913,-21.53592023880242,0 -64.81908594821014,-21.53692689139929,0 -64.82258698083068,-21.53965173124172,0 -64.82365385072617,-21.54055373607202,0 -64.82809312972151,-21.54125341365317,0 -64.82998093449869,-21.54152950951637,0 -64.83391279667831,-21.54073894521428,0 -64.83570190571407,-21.54146644886301,0 -64.83702906629725,-21.54326939236557,0 -64.83754245860428,-21.54417844881284,0 -64.83759899228826,-21.54532489802846,0 -64.83877573520265,-21.54556975041655,0 -64.84029863062271,-21.5459257385127,0 -64.84085582162082,-21.54697624729949,0 -64.84117332639129,-21.54797326756156,0 -64.84167115014415,-21.54867027393048,0 -64.84331753938861,-21.54958689996643,0 -64.84455335209655,-21.55035954407033,0 -64.84561029215071,-21.55104547500311,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.7.1155"></atom:link>
+	</Folder>
+</Document>
+</kml>

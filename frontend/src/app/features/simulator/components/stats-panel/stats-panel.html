@@ -1,0 +1,113 @@
+<div class="stats-panel">
+  <div class="stats-title">
+    <span>Centro de Control</span>
+    <span class="pulse-red" [class.active]="activeFiresCount() > 0"></span>
+  </div>
+
+  <div class="stat-group">
+    <div class="stat-main-row">
+      <div class="stat-main-item">
+        <div class="stat-val">{{ elapsedTime() | number:'1.0-0' }}</div>
+        <div class="stat-lbl">Tiempo (min)</div>
+      </div>
+      <div class="stat-main-item">
+        <div class="stat-val">{{ burnedArea() | number:'1.2-2' }}</div>
+        <div class="stat-lbl">Área (ha)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="stats-divider"></div>
+
+  <!-- Comportamiento del fuego -->
+  <div class="section-title">Comportamiento del Fuego</div>
+  
+  <div class="stat-row">
+    <span class="label">Velocidad Máx (ROS):</span>
+    <span class="value">{{ maxRos() | number:'1.1-1' }} m/min</span>
+  </div>
+  
+  <div class="stat-row">
+    <span class="label">Llama Máxima:</span>
+    <span class="value">{{ maxFlameLength() | number:'1.1-1' }} m</span>
+  </div>
+  
+  <div class="stat-row">
+    <span class="label">Intensidad Máxima:</span>
+    <span class="value">{{ maxIntensity() | number:'1.0-0' }} kW/m</span>
+  </div>
+
+  <div class="stats-divider"></div>
+
+  <!-- Estado de Celdas -->
+  <div class="section-title">Estado del Grid (Celdas)</div>
+  <div class="stat-row">
+    <span class="label">Celdas en Fuego:</span>
+    <span class="value red-text">{{ activeFiresCount() }}</span>
+  </div>
+  <div class="stat-row">
+    <span class="label">Celdas Quemadas:</span>
+    <span class="value gray-text">{{ burnedCellsCount() }}</span>
+  </div>
+
+  <div class="stats-divider"></div>
+
+  <!-- Distribución de Combustible Afectado -->
+  <div class="section-title">Vegetación Afectada</div>
+  
+  <div class="fuel-bar-container">
+    <div class="fuel-header">
+      <span>Pastizal</span>
+      <span>{{ fuelDistribution().pastizal }} celdas ({{ getPercent(fuelDistribution().pastizal) | number:'1.0-0' }}%)</span>
+    </div>
+    <div class="fuel-bar-bg">
+      <div class="fuel-bar-fill fuel-pastizal" [style.width.%]="getPercent(fuelDistribution().pastizal)"></div>
+    </div>
+  </div>
+
+  <div class="fuel-bar-container">
+    <div class="fuel-header">
+      <span>Matorral</span>
+      <span>{{ fuelDistribution().matorral }} celdas ({{ getPercent(fuelDistribution().matorral) | number:'1.0-0' }}%)</span>
+    </div>
+    <div class="fuel-bar-bg">
+      <div class="fuel-bar-fill fuel-matorral" [style.width.%]="getPercent(fuelDistribution().matorral)"></div>
+    </div>
+  </div>
+
+  <div class="fuel-bar-container">
+    <div class="fuel-header">
+      <span>Bosque Ralo</span>
+      <span>{{ fuelDistribution().bosqueRalo }} celdas ({{ getPercent(fuelDistribution().bosqueRalo) | number:'1.0-0' }}%)</span>
+    </div>
+    <div class="fuel-bar-bg">
+      <div class="fuel-bar-fill fuel-ralo" [style.width.%]="getPercent(fuelDistribution().bosqueRalo)"></div>
+    </div>
+  </div>
+
+  <div class="fuel-bar-container">
+    <div class="fuel-header">
+      <span>Bosque Denso</span>
+      <span>{{ fuelDistribution().bosqueDenso }} celdas ({{ getPercent(fuelDistribution().bosqueDenso) | number:'1.0-0' }}%)</span>
+    </div>
+    <div class="fuel-bar-bg">
+      <div class="fuel-bar-fill fuel-denso" [style.width.%]="getPercent(fuelDistribution().bosqueDenso)"></div>
+    </div>
+  </div>
+
+  <div class="stats-divider"></div>
+
+  <!-- Acciones y Estado Combate -->
+  <div class="suppression-status" [class.active]="suppressionActive()">
+    {{ suppressionActive() ? 'COMBATE DE INCENDIO ACTIVO' : 'ESPERANDO DETECCIÓN...' }}
+  </div>
+
+  <button 
+    class="btn-perimeter" 
+    [class.active]="showPerimeter()" 
+    [disabled]="burnedCellsCount() === 0 && activeFiresCount() === 0"
+    (click)="togglePerimeter()"
+  >
+    {{ showPerimeter() ? 'Ocultar Perímetro Rojo' : 'Mostrar Perímetro Rojo' }}
+  </button>
+</div>

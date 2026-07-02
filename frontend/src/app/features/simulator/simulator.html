@@ -1,0 +1,54 @@
+<div class="simulator-layout">
+  <app-control-panel
+    [windSpeed]="windSpeed()"
+    [windDirection]="windDirection()"
+    [humidity]="humidity()"
+    [temperature]="temperature()"
+    [detectionTime]="detectionTime()"
+    [simulationSpeed]="simulationSpeed()"
+    [canStart]="canStart()"
+    [isRunning]="isRunning()"
+    [isPaused]="isPaused()"
+    (windSpeedChange)="windSpeed.set($event)"
+    (windDirectionChange)="windDirection.set($event)"
+    (humidityChange)="humidity.set($event)"
+    (temperatureChange)="temperature.set($event)"
+    (detectionTimeChange)="detectionTime.set($event)"
+    (simulationSpeedChange)="onSimulationSpeedChange($event)"
+    (startSimulation)="onStart()"
+    (pauseSimulation)="onPause()"
+    (resumeSimulation)="onResume()"
+    (stopSimulation)="onStop()"
+    (clearSimulation)="onClear()"
+  />
+  <div class="map-container-wrapper" style="position: relative; flex: 1; height: 100%;">
+    <app-map-viewer
+      [zonePolygons]="zonePolygons()"
+      [cellUpdates]="cellUpdates()"
+      [showPerimeter]="showPerimeter()"
+      [isRunning]="isRunning()"
+      [rows]="rows()"
+      [cols]="cols()"
+      (ignitionPointChange)="onIgnitionPointChange($event)"
+    />
+    <app-stats-panel
+      [elapsedTime]="elapsedTime()"
+      [burnedArea]="burnedArea()"
+      [maxRos]="maxRos()"
+      [suppressionActive]="suppressionActive()"
+      [maxIntensity]="maxIntensity()"
+      [maxFlameLength]="maxFlameLength()"
+      [activeFiresCount]="activeFiresCount()"
+      [burnedCellsCount]="burnedCellsCount()"
+      [fuelDistribution]="fuelDistribution()"
+      (perimeterToggle)="showPerimeter.set($event)"
+    />
+  </div>
+  @if (errorMessage()) {
+    <div class="error-toast">
+      <span class="error-icon">&#9888;</span>
+      <span>{{ errorMessage() }}</span>
+      <button class="error-dismiss" (click)="dismissError()">&times;</button>
+    </div>
+  }
+</div>

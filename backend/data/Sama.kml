@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Poligono Ampliado - Cordillera de Sama</name>
+    <description>Poligono irregular de 8 vertices que abarca el area de la cordillera y una zona de amortiguamiento expandida.</description>
+    <Style id="samaEstiloAmpliado">
+      <LineStyle>
+        <color>ff0055ff</color> <width>3</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>5000aaff</color> </PolyStyle>
+    </Style>
+    <Placemark>
+      <name>Zona Ampliada Sama</name>
+      <styleUrl>#samaEstiloAmpliado</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -64.880000,-21.200000,0
+              -64.750000,-21.450000,0
+              -64.780000,-21.750000,0
+              -64.900000,-21.950000,0
+              -65.180000,-21.950000,0
+              -65.230000,-21.650000,0
+              -65.150000,-21.350000,0
+              -65.000000,-21.200000,0
+              -64.880000,-21.200000,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>

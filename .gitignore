@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.log
+*.npz
+backend/uvicorn_out.txt
+backend/uvicorn_err.txt
+backend/.venv/
+backend/data/
+frontend/dist/
+frontend/node_modules/
+frontend/.angular/
+start_servers.ps1

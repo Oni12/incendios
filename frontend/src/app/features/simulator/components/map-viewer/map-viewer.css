@@ -1,0 +1,33 @@
+.map-container {
+  width: 100%;
+  height: 100%;
+}
+
+
+/* src/app/features/simulator/components/map-viewer/map-viewer.css */
+
+/* Esto le dice a Angular que la etiqueta <app-map-viewer> debe expandirse por completo */
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Esto estira el contenedor interno de Leaflet */
+#map {
+  width: 100%;
+  height: 100%;
+  background-color: #cbd5e1; /* Fondo gris para verificar que ya tiene tamaño */
+}
+
+/* Estilo para el icono del marcador de fuego */
+.fire-marker {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+
+/* Ocultar la barra de créditos de Cesium en la parte inferior para diseño más premium */
+::ng-deep .cesium-viewer-bottom {
+  display: none !important;
+}

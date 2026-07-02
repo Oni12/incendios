@@ -1,0 +1,175 @@
+<div class="panel">
+  <h2 class="panel-title">Parámetros del Fuego</h2>
+
+  <!-- Sección Meteorología -->
+  <div class="wind-section">
+    <h3>Condiciones del Viento</h3>
+    
+    <!-- Velocidad del Viento -->
+    <div class="slider-container">
+      <div class="slider-header">
+        <span class="slider-label">Velocidad del Viento</span>
+        <span class="slider-value">{{ windSpeed() }} km/h</span>
+      </div>
+      <input
+        type="range"
+        class="slider-input"
+        [value]="windSpeed()"
+        (input)="onSpeedInput($event)"
+        min="0"
+        max="80"
+        step="0.5"
+      />
+    </div>
+
+    <!-- Dirección del Viento -->
+    <div class="slider-container">
+      <div class="slider-header">
+        <span class="slider-label">Dirección del Viento</span>
+        <span class="slider-value">
+          {{ windDirection() }}°
+          <span class="direction-arrow" [style.transform]="'rotate(' + windDirection() + 'deg)'">↑</span>
+        </span>
+      </div>
+      <input
+        type="range"
+        class="slider-input"
+        [value]="windDirection()"
+        (input)="onDirectionInput($event)"
+        min="0"
+        max="360"
+        step="1"
+      />
+    </div>
+  </div>
+
+  <!-- Sección Variables Ambientales -->
+  <div class="wind-section">
+    <h3>Variables Ambientales</h3>
+
+    <!-- Temperatura -->
+    <div class="slider-container">
+      <div class="slider-header">
+        <span class="slider-label">Temperatura</span>
+        <span class="slider-value">{{ temperature() }} °C</span>
+      </div>
+      <input
+        type="range"
+        class="slider-input"
+        [value]="temperature()"
+        (input)="onTemperatureInput($event)"
+        min="12"
+        max="35"
+        step="0.5"
+      />
+    </div>
+
+    <!-- Humedad Relativa -->
+    <div class="slider-container">
+      <div class="slider-header">
+        <span class="slider-label">Humedad Relativa</span>
+        <span class="slider-value">{{ humidity() }} %</span>
+      </div>
+      <input
+        type="range"
+        class="slider-input"
+        [value]="humidity()"
+        (input)="onHumidityInput($event)"
+        min="15"
+        max="60"
+        step="1"
+      />
+    </div>
+
+    <!-- Tiempo de Detección -->
+    <div class="slider-container">
+      <div class="slider-header">
+        <span class="slider-label">Retraso Detección (Combate)</span>
+        <span class="slider-value">{{ detectionTime() }} min</span>
+      </div>
+      <input
+        type="range"
+        class="slider-input"
+        [value]="detectionTime()"
+        (input)="onDetectionTimeInput($event)"
+        min="15"
+        max="300"
+        step="5"
+      />
+    </div>
+
+    <!-- Velocidad de Simulación -->
+    <div class="slider-container">
+      <div class="slider-header">
+        <span class="slider-label">Velocidad de Simulación</span>
+        <span class="slider-value">{{ simulationSpeed() }}x</span>
+      </div>
+      <input
+        type="range"
+        class="slider-input"
+        [value]="simulationSpeed()"
+        (input)="onSimulationSpeedInput($event)"
+        min="1"
+        max="10"
+        step="1"
+      />
+    </div>
+  </div>
+
+  <!-- Controles de Simulación -->
+  <div class="controls-section">
+    <h3>Controles</h3>
+    
+    <button
+      class="btn btn-start"
+      [disabled]="!canStart()"
+      (click)="startSimulation.emit()"
+    >
+      Iniciar Simulación
+    </button>
+    
+    <div style="display: flex; gap: 8px;">
+      <button
+        style="flex: 1;"
+        class="btn btn-pause"
+        [disabled]="!isRunning() || isPaused()"
+        (click)="pauseSimulation.emit()"
+      >
+        Pausar
+      </button>
+      <button
+        style="flex: 1;"
+        class="btn btn-resume"
+        [disabled]="!isPaused()"
+        (click)="resumeSimulation.emit()"
+      >
+        Reanudar
+      </button>
+    </div>
+    <div style="display: flex; gap: 8px;">
+      <button
+        style="flex: 1;"
+        class="btn btn-stop"
+        [disabled]="!isRunning()"
+        (click)="stopSimulation.emit()"
+      >
+        Detener
+      </button>
+      <button
+        style="flex: 1;"
+        class="btn btn-clear"
+        (click)="clearSimulation.emit()"
+      >
+        Limpiar
+      </button>
+    </div>
+  </div>
+
+  <!-- Estado General -->
+  <div class="status-section">
+    <h3>Estado de Alerta</h3>
+    <span class="status-badge" [class.running]="isRunning()" [class.paused]="isPaused()">
+      {{ isRunning() ? (isPaused() ? 'Pausado' : 'Corriendo') : 'Detenido' }}
+    </span>
+  </div>
+</div>

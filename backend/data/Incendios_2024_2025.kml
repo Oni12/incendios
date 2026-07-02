@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Incendios Serrania de Sama (2024 - 2025)</name>
+    <description>Polígonos de referencia de las áreas afectadas por los incendios en la Reserva de Sama.</description>
+    
+    <Style id="incendio2024">
+      <LineStyle>
+        <color>ff00a5ff</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7fa0a5ff</color>
+      </PolyStyle>
+    </Style>
+
+    <Style id="incendio2025">
+      <LineStyle>
+        <color>ff0000ff</color>
+        <width>3</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7f0000ff</color>
+      </PolyStyle>
+    </Style>
+
+    <Placemark>
+      <name>Macro-área Afectada 2024</name>
+      <description>Zona norte y cañadones orientales (Erquis, San Andrés, Bella Vista) afectados durante la época seca de 2024.</description>
+      <styleUrl>#incendio2024</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -64.80, -21.46, 0
+              -64.77, -21.48, 0
+              -64.78, -21.55, 0
+              -64.81, -21.65, 0
+              -64.83, -21.65, 0
+              -64.82, -21.55, 0
+              -64.83, -21.48, 0
+              -64.80, -21.46, 0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+    <Placemark>
+      <name>Macro-área Catástrofe 2025</name>
+      <description>Gran incendio de agosto de 2025. Inició en Puesto Tunal (Uriondo) y avanzó con violencia hacia Rincón de la Victoria, Turumayo y San Pedro de Sola, arrasando más de 8.000 hectáreas.</description>
+      <styleUrl>#incendio2025</styleUrl>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>
+              -64.81, -21.51, 0
+              -64.77, -21.52, 0
+              -64.76, -21.57, 0
+              -64.81, -21.66, 0
+              -64.83, -21.75, 0
+              -64.86, -21.74, 0
+              -64.87, -21.64, 0
+              -64.84, -21.55, 0
+              -64.81, -21.51, 0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+
+  </Document>
+</kml>

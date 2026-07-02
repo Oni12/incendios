@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Practico_2.1.kml</name>
+	<Style id="sn_ltblu-blank">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>https://maps.google.com/mapfiles/kml/paddle/ltblu-blank.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>mirth-vfs://ufhn/http://maps.google.com/mapfiles/kml/paddle/ltblu-blank-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<StyleMap id="msn_ltblu-blank">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ltblu-blank</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ltblu-blank</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="inline26">
+		<LineStyle>
+			<color>ff00aaff</color>
+			<width>5</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ltblu-blank">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>https://maps.google.com/mapfiles/kml/paddle/ltblu-blank.png</href>
+			</Icon>
+			<hotSpot x="32" y="1" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<ListStyle>
+			<ItemIcon>
+				<href>mirth-vfs://ufhn/http://maps.google.com/mapfiles/kml/paddle/ltblu-blank-lv.png</href>
+			</ItemIcon>
+		</ListStyle>
+	</Style>
+	<Style id="inline6">
+		<LineStyle>
+			<color>ff00aaff</color>
+			<width>5</width>
+		</LineStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="inline18">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#inline6</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#inline26</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Folder id="0F19DF523C3F7D4608D6">
+		<name>Lugares temporales</name>
+		<open>1</open>
+		<Folder id="1D09CC7EF33F7D4608D6">
+			<name>Lado Azul</name>
+			<open>1</open>
+			<Placemark id="5BA2D3AD5F3F7D4608D6">
+				<name>Area_4</name>
+				<styleUrl>#inline18</styleUrl>
+				<Polygon>
+					<tessellate>1</tessellate>
+					<outerBoundaryIs>
+						<LinearRing>
+							<coordinates>
+								-64.84160190730623,-21.52595447152449,0 -64.84280254017834,-21.52701173482578,0 -64.8443742817424,-21.52804260424161,0 -64.84638277346973,-21.52900285631334,0 -64.84728212257839,-21.53056224499536,0 -64.84874715090726,-21.53250012682987,0 -64.84780801399344,-21.53416606150522,0 -64.84644551081658,-21.53496990485507,0 -64.84440105891709,-21.53647182665159,0 -64.84247722325138,-21.53775924179723,0 -64.84013488949627,-21.54027856335794,0 -64.83796281632408,-21.54219788182981,0 -64.83670767243331,-21.5410497158102,0 -64.83546344521447,-21.53996216713852,0 -64.83362265613172,-21.53993264060584,0 -64.83079723307301,-21.53982601607214,0 -64.83153780951173,-21.53852629366883,0 -64.83219033542689,-21.53565839022769,0 -64.83369057285498,-21.53326455091181,0 -64.83651745270318,-21.53105933464396,0 -64.83860261137728,-21.52841923383397,0 -64.83965466332936,-21.52796788640213,0 -64.84009947735888,-21.52661380556694,0 -64.83941416293902,-21.52484425821331,0 -64.84160190730623,-21.52595447152449,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+			<Placemark id="3A6D23329F3F7D4608D7">
+				<name>Area_4</name>
+				<Camera>
+					<longitude>-64.82818091712936</longitude>
+					<latitude>-21.54472615551161</latitude>
+					<altitude>5958.273882746194</altitude>
+					<heading>-33.78979877776452</heading>
+					<tilt>13.9216107977356</tilt>
+					<roll>-13.66554177704973</roll>
+					<gx:altitudeMode>relativeToSeaFloor</gx:altitudeMode>
+				</Camera>
+				<styleUrl>#msn_ltblu-blank</styleUrl>
+				<Point>
+					<gx:drawOrder>1</gx:drawOrder>
+					<coordinates>-64.84008158569613,-21.53487371421077,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+		<Folder id="5258D5729E3F7D4608D7">
+			<name>Lado Morado</name>
+		</Folder>
+		<atom:link rel="app" href="https://www.google.com/earth/about/versions/#earth-pro" title="Google Earth Pro 7.3.7.1155"></atom:link>
+	</Folder>
+</Document>
+</kml>
